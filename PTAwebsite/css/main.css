@@ -15,6 +15,14 @@ nav{
 	border-bottom: 1px soild rgba(30,35,42,0.06);
 	box-shadow: 0 1px 3px 0 rgba(0,34,77,0.05);
 }
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1.5rem;
+}
 a{
 	color: #13a3d3;
 	text-decoration: none;
@@ -57,6 +65,21 @@ button {
     border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
     border-image: initial;
     border-radius: 2px;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+ol {
+    list-style-type: decimal;
+}
+ol, ul, dl {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
 }
 .navheadcontainer{
 	display: flex;
@@ -119,10 +142,10 @@ button {
     white-space: nowrap;
     vertical-align: middle;
     user-select: none;
-    border: 1px solid transparent;
+    border: 2px solid #fff;
     font-size: 0.875rem;
     line-height: 1.5;
-    border-radius: 0.125rem;
+    border-radius: 0.25rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .btn-outline-dark{
@@ -184,4 +207,110 @@ button {
 }
 .btn-dropdown-item:hover{
 	background: #aaa;
+}
+.homePage{
+	position: absolute;
+	top: 0;
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	background: #f4f4f4;
+}
+.carousel-slide{
+	z-index: 1;
+	overflow: hidden;
+	position: relative;
+}
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none;
+}
+.carousel-indicators li {
+    position: relative;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 3px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.carousel-indicators .active {
+    background-color: #fff;
+}
+.carousel-indicators li::before {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 10px;
+    content: "";
+}
+.carousel-indicators li::after {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 10px;
+    content: "";
+}
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.carousel-inner .active {
+    display: flex !important;
+}
+.bannerContainer{
+	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+.bannerContent{
+	max-width: 960px;
+	width: 70%;
+	color: white;
+	position: absolute;
+	top: 120px;
+	align-items: center;
+}
+.banner_1{
+    position: relative;
+    display: none;
+    align-items: center;
+    width: 100%;
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+.bannerButton1{
+    width: 190px;
+    height: 45px;
+    font-size: 18px;
+    background: white;
+    color: #18b7f0;
+    border-radius: 2px;
+    border-color: unset !important;
+    padding: 0;
+    margin-top: 16px;
+}
+.btn-secondary {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
 }
