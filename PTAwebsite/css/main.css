@@ -415,6 +415,7 @@ tr {
     height: 32px;
     background: transparent no-repeat center center;
     background-size: 100% 100%;
+	cursor: pointer;
 }
 .carousel-control-next-icon {
     background: url(../img/caret-right.png);
